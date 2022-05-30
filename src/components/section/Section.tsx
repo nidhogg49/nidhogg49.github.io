@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styles from './styles.module.scss'
 
 type Props = {
     title?: string;
@@ -7,8 +8,8 @@ type Props = {
 
 const Section = ({ title, children }: Props) => {
     return (
-        <div>
-            {title && <h1>{title}</h1>}
+        <div className={styles.section}>
+            {title && <span>{title}</span>}
             {children && <div>{children}</div>}
         </div>
     );
